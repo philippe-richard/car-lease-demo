@@ -1,7 +1,7 @@
 FROM node:argon
 
 # Install required prereqs.
-RUN apt-get -y update && apt-get -y install netcat
+RUN apt-get -y update && apt-get -y install netcat npm nodejs-legacy nodejs git
 
 # Create app directory
 RUN mkdir -p /usr/src/app

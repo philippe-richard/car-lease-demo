@@ -13,8 +13,11 @@ then
 fi
 
 # Tag the latest version of fabric-baseimage
-docker pull hyperledger/fabric-baseimage:x86_64-0.1.0
-docker tag hyperledger/fabric-baseimage:x86_64-0.1.0 hyperledger/fabric-baseimage:latest
+#docker pull hyperledger/fabric-baseimage:x86_64-0.1.0
+#docker tag hyperledger/fabric-baseimage:x86_64-0.1.0 hyperledger/fabric-baseimage:latest
+
+docker pull hyperledger/fabric-baseimage:s390x-0.2.2
+docker tag hyperledger/fabric-baseimage:s390x-0.2.2 hyperledger/fabric-baseimage:latest
 
 # Clean up old docker containers
 docker-compose -f $DIR/docker-compose.yml kill;

@@ -8,7 +8,8 @@ services:
       - "7054:7054"
   vp0:
     image: hyperledger/fabric-peer:latest
-    command: "sh -c 'while ! nc membersrvc 7054; do sleep 1; done; peer node start'"
+#    command: "sh -c 'while ! nc membersrvc 7054; do sleep 1; done; peer node start'"
+    command: "sh -c 'sleep 2; peer node start'"
     environment:
       - CORE_PEER_ADDRESSAUTODETECT=true
       - "CORE_VM_ENDPOINT=unix:///var/run/docker.sock"
