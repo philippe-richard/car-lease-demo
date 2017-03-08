@@ -1,5 +1,4 @@
-FROM node:argon
-
+FROM hyperledgerlinuxone/ubuntu:xenial
 # Install required prereqs.
 RUN apt-get -y update && apt-get -y install netcat npm nodejs-legacy nodejs git
 
