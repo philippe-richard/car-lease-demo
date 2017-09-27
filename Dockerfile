@@ -7,7 +7,7 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 # Update npm
-RUN npm install -g npm
+RUN npm install -g npm@2.14.12
 
 # Install app dependencies
 COPY package.json /usr/src/app/
